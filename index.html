@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Masonary</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Packery - Draggabilly</h1>
+
+    <div class="grid">
+      <!-- <a href="image.html" target="_blank"><div class="grid-item grid-item--1"></div></a>
+      <div class="grid-item grid-item--2"></div>
+      <div class="grid-item grid-item--3"></div>
+      <div class="grid-item grid-item--4"></div>
+      <div class="grid-item grid-item--5"></div>
+      <div class="grid-item grid-item--6"></div>
+      <div class="grid-item grid-item--7"></div>
+      <div class="grid-item grid-item--8"></div>
+      <div class="grid-item grid-item--9"></div>
+      <div class="grid-item grid-item--10"></div>
+      <div class="grid-item grid-item--11"></div>
+      <div class="grid-item grid-item--12"></div>
+      <div class="grid-item grid-item--13"></div>
+      <div class="grid-item grid-item--14"></div>
+      <div class="grid-item grid-item--15"></div>
+      <div class="grid-item grid-item--16"></div>
+      <div class="grid-item grid-item--17"></div>
+      <div class="grid-item grid-item--18"></div> -->
+
+      <div class="grid-item"> 
+        <img src="image6.jpg" alt="">
+      </div>
+      <div class="grid-item"> 
+        <img src="image7.jpg" alt="">
+      </div>
+      <div class="grid-item"> 
+        <img src="image8.jpg" alt="">
+      </div>
+      <div class="grid-item"> 
+        <img src="image6.jpg" alt="">
+      </div>
+      <div class="grid-item"> 
+        <img src="1.jpg" alt="">
+      </div>
+      <div class="grid-item"> 
+        <img src="2.jpg" alt="">
+      </div>
+      <div class="grid-item"> 
+        <img src="4.jpg" alt="">
+      </div>
+      <div class="grid-item"> 
+        <img src="image7.jpg" alt="">
+      </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/packery@2/dist/packery.pkgd.js"></script>
+
+    <script>
+
+// external js: packery.pkgd.js, draggabilly.pkgd.js
+
+var $grid = $('.grid').packery({
+  itemSelector: '.grid-item',
+  columnWidth: 100
+});
+
+// make all grid-items draggable
+$grid.find('.grid-item').each( function( i, gridItem ) {
+  var draggie = new Draggabilly( gridItem );
+  // bind drag events to Packery
+  $grid.packery( 'bindDraggabillyEvents', draggie );
+});
+
+
+    </script>
+</body>
+</html>
